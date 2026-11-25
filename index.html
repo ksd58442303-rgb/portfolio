@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김승담 | 포트폴리오</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 스크롤 진행률 표시 바 -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- 헤더 및 내비게이션 -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">SEUNGDAM.</a>
+            <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 히어로 섹션 -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-greeting">안녕하세요!</p>
+            <h1 class="hero-title">저는 <span>김승담</span>입니다.</h1>
+            <p class="hero-subtitle">영상 디렉터 · 그래픽 디자이너</p>
+            <a href="#projects" class="hero-btn">프로젝트 보러가기</a>
+        </div>
+    </section>
+
+    <!-- 프로젝트 섹션 -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title projects-title">프로젝트</h2>
+            <p class="section-desc">영상 연출과 시각 디자인을 결합한 주요 작업물입니다.</p>
+            <div class="project-grid">
+                <!-- 프로젝트 1 -->
+                <article class="project-card">
+                    <div class="card-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=900&q=80"
+                            alt="영상 촬영 및 영화 연출 이미지"
+                            loading="lazy"
+                            onerror="this.parentElement.classList.add('img-fallback-1'); this.style.display='none';"
+                        >
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Video Production</span>
+                        <h3>웹툰 &lt;킬러배드로&gt; 티저 영상</h3>
+                        <p>원작의 긴장감을 살린 팀 프로젝트 티저 영상. 촬영과 컷 편집, 서스펜스 사운드 연출을 담당했습니다.</p>
+                    </div>
+                </article>
+
+                <!-- 프로젝트 2 -->
+                <article class="project-card">
+                    <div class="card-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1517649763962-0c62326fe019?auto=format&fit=crop&w=900&q=80"
+                            alt="보행자 안전 캠페인 기획 이미지"
+                            loading="lazy"
+                            onerror="this.parentElement.classList.add('img-fallback-2'); this.style.display='none';"
+                        >
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Campaign &amp; Design</span>
+                        <h3>신호등 없는 횡단보도 안전 캠페인</h3>
+                        <p>보행자 사고 예방을 위한 공모전 기획안. 행동 넛지를 적용한 차량용 방향제와 세로형 안전 포스터를 디자인했습니다.</p>
+                    </div>
+                </article>
+
+                <!-- 프로젝트 3 -->
+                <article class="project-card">
+                    <div class="card-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=900&q=80"
+                            alt="그래픽 디자인 및 포스터 작업 이미지"
+                            loading="lazy"
+                            onerror="this.parentElement.classList.add('img-fallback-3'); this.style.display='none';"
+                        >
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Graphic Design</span>
+                        <h3>캠페인 포스터 &amp; 타이틀 로고 디자인</h3>
+                        <p>Adobe Photoshop을 활용한 헌혈 캠페인 포스터 및 패러디 영상 타이틀 로고 제작 프로젝트입니다.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 연락하기(Contact) 섹션 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-desc">협업 제안이나 궁금한 점이 있다면 편하게 메시지를 남겨주세요.</p>
+            <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="name" class="sr-only">이름</label>
+                    <input type="text" id="name" name="name" placeholder="이름" required>
+                    <small class="error-msg" id="nameError"></small>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="sr-only">이메일</label>
+                    <input type="email" id="email" name="email" placeholder="이메일" required>
+                    <small class="error-msg" id="emailError"></small>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="sr-only">메시지</label>
+                    <textarea id="message" name="message" rows="5" placeholder="메시지" required></textarea>
+                    <small class="error-msg" id="messageError"></small>
+                </div>
+                <button type="submit" class="submit-btn">보내기</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 김승담. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 알림 토스트 -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
